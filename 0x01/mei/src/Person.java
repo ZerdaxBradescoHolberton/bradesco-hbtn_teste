@@ -15,17 +15,6 @@ public class Person {
     private boolean publicServer;
     private float salary;
 
-    public Person(String name, String surname, Date birthDate, boolean anotherCompanyOwner,
-                  boolean pensioner, boolean publicServer, float salary) {
-        this.name = name;
-        this.surname = surname;
-        this.birthDate = birthDate;
-        this.anotherCompanyOwner = anotherCompanyOwner;
-        this.pensioner = pensioner;
-        this.publicServer = publicServer;
-        this.salary = salary;
-    }
-
     public String getName() {
         return name;
     }

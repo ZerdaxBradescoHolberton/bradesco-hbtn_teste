@@ -1,6 +1,5 @@
 package mei.src;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -14,12 +13,19 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PersonTest {
 
-    public static Person person;
+    private static Person person;
 
     @BeforeAll
     public static void setup() {
-        person = new Person("Paul", "McCartney", Date.from(LocalDate.of(2000, 1, 1)
-                        .atStartOfDay(ZoneId.systemDefault()).toInstant()), true, true, true, 1200);
+        person = new Person();
+        person.setName("Paul");
+        person.setSurname("McCartney");
+        person.setBirthDate(Date.from(LocalDate.of(2000, 1, 1)
+                .atStartOfDay(ZoneId.systemDefault()).toInstant()));
+        person.setPensioner(true);
+        person.setAnotherCompanyOwner(true);
+        person.setPublicServer(true);
+        person.setSalary(1200);
     }
 
     @Test
