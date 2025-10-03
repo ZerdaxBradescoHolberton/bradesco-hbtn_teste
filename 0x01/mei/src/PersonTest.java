@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PersonTest {
 
-    private static Person person;
+    public static Person person;
 
     @BeforeAll
     public static void setup() {
